@@ -15,15 +15,13 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
 </head>
-<body class="light-grey">
+
+<body class="grey">
 
 <!-- Page Container -->
-<div class="content margin" style="max-width:1400px;">
+<div class="margin" style="max-width:1400px;">
 
-  <!-- The Grid -->
-  <div class="row-padding">
-
-	<div class="white">
+	<div class="white-head">
 	  <h1> Pranav Debbad's Personal Dashboard </h1>
 	</div>
 
@@ -36,7 +34,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 		<a href="#calendar">Calendar&nbsp;<i class="fa fa-calendar"></i></a>
 		<a href="#">Contact&nbsp;<i class="fa fa-phone"></i></a>
 		<a href="#">Settings&nbsp;<i class="fa fa-gear"></i></a>
-		<a href="#">Profile&nbsp;<i class="fa fa-user-circle"></i></a>
+		<a href="https://www.linkedin.com/in/pranav-debbad" target="_blank">Profile&nbsp;<i class="fa fa-user-circle"></i></a>
 		<a href="#">Logout&nbsp;<i class="fa fa-sign-out"></i></a>
 	</div>
 
@@ -45,9 +43,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     <!-- Left Column -->
     <div class="flex-item" id="calendar">
     		<div class = "grid-container">
-    			<div class = "grid-item col1"><i class="arrow left"></i></div>
+    			<div class = "grid-item" style = "background-color: #91d0c9;"><i class="arrow left"></i></div>
     			<div class = "month grid-item">April</div>
-    			<div class = "grid-item col1"><i class="arrow right"></i></div>
+    			<div class = "grid-item" style = "background-color: #91d0c9;"><i class="arrow right"></i></div>
 	    		<div class = "grid-day">S</div> 
 	    		<div class = "grid-day">M</div>
 	    		<div class = "grid-day">T</div>
@@ -97,9 +95,8 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     		<span onclick="updateBudget(3)" class="addBtn alignRight">reset</span>
     	</div>
     	<div class="col">
-    		<span id = "savings">Total balance = <span id="result1"></span></span>
-    		<br>
-    		<span id = "expenditure">Total expenditure = <span id="result2"></span></span>
+    		<span id = "savings">Total balance: <span id="result1" style="color: forestgreen; font-weight: bold;"></span></span>
+    		<span id = "expenditure">Total expenses: <span id="result2" style="color: red; font-weight: bold;"></span></span>
     	</div>
     </div>
 
@@ -113,7 +110,6 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 			<ul id="myUL">
 			  <li>Hit the gym</li>
 			  <li class="checked">Pay bills</li>
-			  <li>Meet Ishaan</li>
 			  <li>Buy eggs</li>
 			</ul>
     </div>
@@ -150,7 +146,8 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 	  var txt = document.createTextNode("\u00D7");
 	  span.className = "close";
 	  span.appendChild(txt);
-	  myNodelist[i].appendChild(span);
+	  if(myNodelist[i].parentElement.getAttribute('id')=="notepad"||myNodelist[i].parentElement.getAttribute('id')=="myUL")
+	  	myNodelist[i].appendChild(span);
 	}
 
 	// Click on a close button to hide the current list item
