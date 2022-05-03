@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Personal Dashboard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="ToDoListStyle.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body class="grey">
+
+<!-- Page Container -->
+<div class="margin" style="max-width:1400px;">
+
+	<div class="white-head">
+	  <h1> Pranav Debbad's Personal Dashboard </h1>
+	</div>
+
+	<div class="navbar">
+		<a href="#">Search&nbsp;<i class="fa fa-search"></i></a>
+		<a href="#">Home&nbsp;<i class="fa fa-home"></i></a>
+	  <a href="#notif">Inbox&nbsp;<i class="fa fa-envelope"></i></a>
+		<a href="https://www.bbc.com/news/world" target="_blank">Global News&nbsp;<i class="fa fa-globe"></i></a>
+		<a href="#">Announcements&nbsp;<i class="fa fa-bullhorn"></i></a>
+		<a href="#calendar">Calendar&nbsp;<i class="fa fa-calendar"></i></a>
+		<a href="#">Contact&nbsp;<i class="fa fa-phone"></i></a>
+		<a href="#">Settings&nbsp;<i class="fa fa-gear"></i></a>
+		<a href="https://www.linkedin.com/in/pranav-debbad" target="_blank">Profile&nbsp;<i class="fa fa-user-circle"></i></a>
+		<a href="#">Logout&nbsp;<i class="fa fa-sign-out"></i></a>
+	</div>
+
+
+  <div class="flex-container">
+    <!-- Left Column -->
+    <div class="flex-item" id="calendar">
+    		<div class = "grid-container">
+    			<div class = "grid-item" style = "background-color: #91d0c9;"><i class="arrow left"></i></div>
+    			<div class = "month grid-item">April</div>
+    			<div class = "grid-item" style = "background-color: #91d0c9;"><i class="arrow right"></i></div>
+	    		<div class = "grid-day">S</div> 
+	    		<div class = "grid-day">M</div>
+	    		<div class = "grid-day">T</div>
+	    		<div class = "grid-day">W</div>
+	    		<div class = "grid-day">T</div>
+	    		<div class = "grid-day">F</div>
+	    		<div class = "grid-day">S</div>
+    			<div class = "grid-item day-1">1</div>
+    			<div class = "grid-item">2</div>
+    			<div class = "grid-item">3</div>
+    			<div class = "grid-item">4</div>
+    			<div class = "grid-item">5</div>
+    			<div class = "grid-item">6</div>
+    			<div class = "grid-item">7</div>
+    			<div class = "grid-item">8</div>
+    			<div class = "grid-item">9</div>
+    			<div class = "grid-item">10</div>
+    			<div class = "grid-item">11</div>
+    			<div class = "grid-item">12</div>
+    			<div class = "grid-item">13</div>
+    			<div class = "grid-item">14</div>
+    			<div class = "grid-item">15</div>
+    			<div class = "grid-item">16</div>
+    			<div class = "grid-item">17</div>
+    			<div class = "grid-item">18</div>
+    			<div class = "grid-item">19</div>
+    			<div class = "grid-item">20</div>
+    			<div class = "grid-item">21</div>
+    			<div class = "grid-item">22</div>
+    			<div class = "grid-item">23</div>
+    			<div class = "grid-item">24</div>
+    			<div class = "grid-item">25</div>
+    			<div class = "grid-item active">26</div>
+    			<div class = "grid-item">27</div>
+    			<div class = "grid-item">28</div>
+    			<div class = "grid-item">29</div>
+    			<div class = "grid-item">30</div>
+    		</div>
+    </div>
+
+    <div class="flex-item">
+    	<div id="budgetTracker" class="header">
+    		<h2>Budget Tracker</h2>
+    		<input type="number" id="amountInput" placeholder="Enter amount...">
+    		<span onclick="updateBudget(1)" class="budgetBtn exp">New expense</span>
+    		<span onclick="updateBudget(2)" class="budgetBtn inc">New income</span>
+    		<span onclick="updateBudget(3)" class="addBtn alignRight">reset</span>
+    	</div>
+    	<div class="col">
+    		<span id = "savings">Total balance: <span id="result1" style="color: forestgreen; font-weight: bold;"></span></span>
+    		<span id = "expenditure">Total expenses: <span id="result2" style="color: red; font-weight: bold;"></span></span>
+    	</div>
+    </div>
+
+    <div class="flex-item">
+    	<div id="myDIV" class="header">
+		  	<h2>To-Do List</h2>
+		  	<input type="text" id="myInput" placeholder="Enter task...">
+		  	<span onclick="newElement()" class="addBtn">Add</span>
+			</div>
+
+			<ul id="myUL">
+			  <li>Hit the gym</li>
+			  <li class="checked">Pay bills</li>
+			  <li>Buy eggs</li>
+			</ul>
+    </div>
+
+  <div class="flex-item notific">
+    	<h2>Notifications</h2>
+    	<ul id="notif">
+    		<li><span class="name">nishanth nathaniel mages</span>:&nbsp;&nbsp;wanna meet at 8 at usha?<i class="fa fa-eye-slash"></i></span></li>
+    		<li><span class="name">surya sai pranav mantripragada</span>:&nbsp;&nbsp;can i touch your guitar?<i class="fa fa-eye-slash"></i></li>
+    		<li><span class="name">kanish thiagarajan</span>:&nbsp;&nbsp;let's watch pitch perfect 3 tonight<i class="fa fa-eye-slash"></i></li>
+    		<li><span class="name">adithyaa rg</span>:&nbsp;&nbsp;i want cheese maggi at usha!!!<i class="fa fa-eye-slash"></i></li>
+    		<li><span class="name">leon davis</span>:&nbsp;&nbsp;any biharis here dm me<i class="fa fa-eye-slash"></i></li>
+    	</ul>
+ 	</div>
+
+ 	<div class="flex-item note">
+	 	<div class = "notes header" >
+	 		<h2>My Notes</h2>
+	 		<input type="text" id="myInput1" placeholder="Enter note">
+	 		<span onclick="newElement1()" class="addBtn">+</span>
+	 	</div>
+
+	 	<ul id="notepad">
+	 	</ul>
+
+	</div>
+ </div> 
+
+<script>
+	var myNodelist = document.getElementsByTagName("LI");
+	var i;
+	for (i = 0; i < myNodelist.length; i++) {
+	  var span = document.createElement("SPAN");
+	  var txt = document.createTextNode("\u00D7");
+	  span.className = "close";
+	  span.appendChild(txt);
+	  if(myNodelist[i].parentElement.getAttribute('id')=="notepad"||myNodelist[i].parentElement.getAttribute('id')=="myUL")
+	  	myNodelist[i].appendChild(span);
+	}
+
+	// Click on a close button to hide the current list item
+	var close = document.getElementsByClassName("close");
+	var i;
+	for (i = 0; i < close.length; i++) {
+	  close[i].onclick = function() {
+	    var div = this.parentElement;
+	   	div.style.display = "none";
+	  }
+	}
+
+	// Add a "checked" symbol when clicking on a list item
+	var list = document.querySelector('ul');
+	list.addEventListener('click', function(ev) {
+	  if (ev.target.tagName === 'LI') {
+	    ev.target.classList.toggle('checked');
+	  }
+	}, false);
+
+	// Create a new list item when clicking on the "Add" button
+	function newElement() {
+	  var li = document.createElement("li");
+	  var inputValue = document.getElementById("myInput").value;
+	  var t = document.createTextNode(inputValue);
+	  li.appendChild(t);
+	  if (inputValue === '') {
+	    alert("pls write something!");
+	  } else {
+	    document.getElementById("myUL").appendChild(li);
+	  }
+	  document.getElementById("myInput").value = "";
+
+	  var span = document.createElement("SPAN");
+	  var txt = document.createTextNode("\u00D7");
+	  span.className = "close";
+	  span.appendChild(txt);
+	  li.appendChild(span);
+
+	  for (i = 0; i < close.length; i++) {
+	    close[i].onclick = function() {
+	      var div = this.parentElement;
+	      div.style.display = "none";
+	    }
+	  }
+	}
+
+	function newElement1() {
+	  var li = document.createElement("li");
+	  var inputValue = document.getElementById("myInput1").value;
+	  var t = document.createTextNode(inputValue);
+	  li.appendChild(t);
+	  if (inputValue === '') {
+	    alert("pls write something!");
+	  } else {
+	    document.getElementById("notepad").appendChild(li);
+	  }
+	  document.getElementById("myInput1").value = "";
+
+	  var span = document.createElement("SPAN");
+	  var txt = document.createTextNode("\u00D7");
+	  span.className = "close";
+	  span.appendChild(txt);
+	  li.appendChild(span);
+
+	  for (i = 0; i < close.length; i++) {
+	    close[i].onclick = function() {
+	      var div = this.parentElement;
+	      div.style.display = "none";
+	    }
+	  }
+	}
+
+	var expenses = 0;
+	var balance = 0;
+
+	function updateBudget(ch){
+		var am = Number(document.getElementById("amountInput").value);
+		if(ch==1)
+		{
+			if(am<=balance)
+			{
+				expenses+=am;
+				balance-=am;
+			}
+			else
+				alert("you don't have enough money!");
+		}
+		else if (ch==2)
+		{
+			 balance+=am;
+		}
+		else
+		{
+			expenses=0;
+			balance=0;
+		}
+
+		document.getElementById("result1").innerHTML = balance;
+		document.getElementById("result2").innerHTML = expenses;
+		document.getElementById("amountInput").value = "";
+	}
+
+	document.addEventListener('click', function handleClick(event) {
+  var elms = event.target.getElementsByTagName('i')[0];
+  if(elms.classList.contains('fa')&&(elms.classList.contains('fa-eye')||elms.classList.contains('fa-eye-slash')))
+  {
+	  if(elms.classList.contains('fa-eye-slash'))
+	  {
+	  	event.target.classList.toggle('read');
+	  	elms.classList.remove('fa-eye-slash');
+	 	 	elms.classList.add('fa-eye');
+		}
+		else
+		{
+			event.target.classList.toggle('read');
+			elms.classList.add('fa-eye-slash');
+	 	 	elms.classList.remove('fa-eye');
+		}
+	}
+	});
+
+</script>
+</body>
+</html>

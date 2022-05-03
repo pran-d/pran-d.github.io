@@ -1,27 +1,77 @@
-	.light-grey{
+	/* Include the padding and border in an element's total width and height */
+	* {
+	  box-sizing: border-box;
+	}
+
+	/*SETTING UP THE PAGE*/
+
+	.grey{
 		background-color: #333333!important
 	}
-	.content{
-		max-width: 980px;
-		margin-left: auto;
-    	margin-right: auto;
-    }
+
     .margin{
-    	margin-top: 15px!important;
+    	margin-top: 0px!important;
     	margin-bottom: 75px!important;
     }
-    .row-padding{
-    	padding: 2 8px;
-    }
-    .white{
+
+    .white-head{
     	color:#f9f9f9!important;
     	text-shadow: 4px 4px #333;
     	background-color:darkslategrey!important;
     	text-align: center;
-    	margin-bottom: 0px;
     	padding-top: 5px;
     	padding-bottom: 1px;
     }
+
+
+    /* Style the top navigation bar */
+	.navbar {
+	  	display: inline-flex;
+	  	flex-wrap: wrap;
+	  	max-width: 100%;
+	  	background-color: darkslategrey;
+	}
+
+	/* Style the navigation bar links */
+	.navbar a {
+	  color: white;
+	  padding: 14px 20px;
+	  background-color: #003333;
+	  text-decoration: none;
+	  text-align: center;
+	  border: solid black;
+	}
+
+	/* Change color on hover */
+	.navbar a:hover {
+	  background-color: #ddd;
+	  color: black;
+	}
+
+
+
+
+	/*STYLING THE FLEXBOX USED IN VARIOUS ELEMENTS*/
+
+	.flex-container {
+ 		 display: flex;
+ 		 flex-direction: row;
+ 		 flex-wrap: wrap;
+ 		 align-items: flex-start;
+ 		 justify-content: space-between;
+ 	}
+
+ 	.flex-item{
+    	text-align: center;
+    	padding: 10px;
+    	border-radius: 20px;
+    }
+
+
+
+
+    /*STYLING THE CALENDAR*/
+
     .grid-container{
     	width: 100%;
     	background-color: ghostwhite;
@@ -29,9 +79,13 @@
     	grid-template-columns: auto auto auto auto auto auto auto;
     	row-gap: 1px;
     }
-    .row1{
-    	background-color: teal;
+
+    .grid-item{
+    	text-align: center;
+    	padding: 5px;
+    	padding-right: 10px!important;
     }
+
     .month{
     	font-size: 30px;
     	padding-bottom: 10px;
@@ -40,28 +94,23 @@
     	grid-column-end: 7;
     	background-color: #91d0c9;
     }
-    .day-1{
-    	grid-column-start: 6;
-    }
-    .active{
-    	background-color: #008B8B;
-    	color: white;
-    }
-    .flex-item{
-    	text-align: center;
-    	padding: 10px;
-    }
-    .grid-item{
-    	text-align: center;
-    	padding: 5px;
-    	padding-right: 10px!important;
-    }
-    .grid-day{
+
+	.grid-day{
     	text-align: center;
     	padding: 1px;
     	background-color: #008B8B;
     	color: ghostwhite;
     }
+
+    .day-1{
+    	grid-column-start: 6;
+    }
+
+    .active{
+    	background-color: #008B8B;
+    	color: white;
+    }
+
     .arrow {
 	  border: solid black;
 	  border-width: 0 3px 3px 0;
@@ -85,31 +134,129 @@
 	  transform: rotate(135deg);
 	  -webkit-transform: rotate(135deg);
 	}
-	.col1{
-		background-color: #91d0c9;
+
+
+
+
+	/*A FEW COMMONLY USED CLASSES*/
+
+	/* Style the header */
+	.header {
+	  background-color: #008B8B;
+	  padding: 10px 50px;
+	  color: white;
+	  text-align: center;
+	  border-top-left-radius: 20px;
+	  border-top-right-radius: 20px;
 	}
 
-	.flex-container {
- 		 display: flex;
- 		 flex-direction: row;
- 		 flex-wrap: wrap;
- 		 align-items: flex-start;
- 		 justify-content: space-between;
- 	}
-
-	/*.container{
-		padding: 20px;
-		padding-left: 0px!important;
-		padding-top: 0px!important;
-		column-gap: 20px;
-		display: inline-grid;
-		grid-template-columns: 25% 45% 29%;
-	}*/
-
-	/* Include the padding and border in an element's total width and height */
-	* {
-	  box-sizing: border-box;
+	/* Clear floats after the header */
+	.header:after {
+	  content: "";
+	  display: table;
+	  clear: both;
 	}
+
+	/* Style the input */
+	input {
+	  margin: 0;
+	  border: none;
+	  border-radius: 5px;
+	  width: 75%;
+	  padding: 10px;
+	  float: left;
+	  font-size: 16px;
+	}
+
+	/* Style the "Add" button */
+	.addBtn {
+	  padding: 10px;
+	  display: inline-block;
+	  background: #d9d9d9;
+	  color: #555;
+	  float: left;
+	  text-align: center;
+	  font-size: 16px;
+	  cursor: pointer;
+	  transition: 0.3s;
+	  border-radius: 5px;
+	}
+
+	.addBtn:hover {
+	  background-color: #bbb;
+	}
+
+
+
+
+
+	/*STYLING THE BUDGET TRACKER*/
+
+	#amountInput{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
+	.budgetBtn {
+	  padding: 9px;
+	  width: 50%;
+	  color: #555;
+	  float: left;
+	  text-align: center;
+	  font-size: 16px;
+	  cursor: pointer;
+	  transition: 0.3s;
+	}
+	.budgetBtn:hover {
+	  transform: scale(0.9);
+	}
+
+	.exp{
+		background: #ff8080;
+		color: floralwhite;
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
+	}
+	.inc{
+		background: #c5fbc9;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+
+	.alignRight{
+		margin-top: 10px;
+		float: right!important;
+		padding: 5px!important;
+	}
+
+	.col{
+		background-color: #ccc;
+		padding: 16px 15px 50px 15px;
+		color: black;
+		border-bottom-right-radius: 20px;
+		border-bottom-left-radius: 20px;
+	}
+
+	#savings, #expenditure {
+		font-size: 18px!important;
+		background-color: white;
+		font-family: 'Courier New', monospace;
+		font-weight: bold;
+		padding: 5px!important;
+		border-radius: 5px!important;
+		max-width: 50%;
+	}
+	#savings{
+		float: left;
+	}
+	#expenditure{
+		float: right;
+	}
+
+
+
+
+	/*STYLING THE TO-DO LIST*/
 
 	/* Remove margins and padding from the list */
 	#myUL {
@@ -178,16 +325,15 @@
 	  color: white;
 	}
 
-	/* Style the header */
-	.header {
-	  background-color: #008B8B;
-	  padding: 10px 50px;
-	  color: white;
-	  text-align: center;
-	}
+	
+
+
+
+	/*STYLING THE NOTIFICATIONS SECTION*/
 
 	.notific{
-		width: 100%;
+		min-width: 400px!important;
+		width: 60%;
 		margin-top: 20px;
 		font-size: 20px;
 		background-color: #009393;
@@ -196,86 +342,10 @@
 	  	text-align: center;
 	}
 
-	/* Clear floats after the header */
-	.header:after {
-	  content: "";
-	  display: table;
-	  clear: both;
+	#notif{
+		list-style: none;
 	}
 
-	/* Style the input */
-	input {
-	  margin: 0;
-	  border: none;
-	  border-radius: 0;
-	  width: 75%;
-	  padding: 10px;
-	  float: left;
-	  font-size: 16px;
-	}
-
-	/* Style the "Add" button */
-	.addBtn {
-	  padding: 10px;
-	  display: inline-block;
-	  background: #d9d9d9;
-	  color: #555;
-	  float: left;
-	  text-align: center;
-	  font-size: 16px;
-	  cursor: pointer;
-	  transition: 0.3s;
-	  border-radius: 0;
-	}
-
-	.addBtn:hover {
-	  background-color: #bbb;
-	}
-
-	.budgetBtn {
-	  padding: 9px;
-	  width: 50%;
-	  color: #555;
-	  float: left;
-	  text-align: center;
-	  font-size: 16px;
-	  cursor: pointer;
-	  transition: 0.3s;
-	}
-	.exp{
-		background: #ff8080;
-	}
-	.inc{
-		background: #c5fbc9;
-	}
-	.budgetBtn:hover {
-	  transform: scale(0.9);
-	}
-	.col{
-		background-color: #ccc;
-		padding: 10px;
-		color: black;
-	}
-	#amountInput{
-		width: 100%;
-		margin-bottom: 10px;
-	}
-	#savings{
-		font-size: 20px;
-	}
-	#expenditure{
-		font-size: 20px;
-	}
-	.alignRight{
-		margin-top: 10px;
-		float: right!important;
-		padding: 5px!important;
-	}
-	/*.span3
-	{
-		grid-column-start: 2;
-		grid-column-end: 4;
-	}*/
 	#notif li{
 		width: 100%;
 		cursor: pointer;
@@ -284,54 +354,31 @@
 	  	background: white;
 	  	border: solid;
 	  	border-color: black;
+	  	border-radius: 15px;
 	  	color: black;
 	  	font-family: 'Times New Roman', sans-serif;
 	  	font-size: 20px;
 	}
-	.name{
-		font-size: 15px!important;
-		font-weight: bold;
-		font-family: Helvetica, sans-serif;
-	}
-	.square {
-	  height: 5px;
-	  width: 5px;
-	  background-color: #555;
-	}
-	.fa{
-		float: right;
-	}
-	#notif{
-		list-style: none;
-	}
+
 	#notif li.read {
 	  background: #ccc!important;
 	  color: black;
 	}
 
-	/* Style the top navigation bar */
-	.navbar {
-	  	display: inline-flex;
-	  	flex-wrap: wrap;
-	  	max-width: 100%;
-	  	background-color: darkslategrey;
+	.name{
+		font-size: 15px!important;
+		font-weight: bold;
+		font-family: Helvetica, sans-serif;
 	}
 
-	/* Style the navigation bar links */
-	.navbar a {
-	  color: white;
-	  padding: 14px 20px;
-	  background-color: #003333;
-	  text-decoration: none;
-	  text-align: center;
-	  border: solid black;
+	.fa{
+		float: right;
 	}
 
-	/* Change color on hover */
-	.navbar a:hover {
-	  background-color: #ddd;
-	  color: black;
-	}
+
+
+
+	/*STYLING THE NOTEPAD*/
 
 	.notes{
 		margin-top: 10px;
@@ -371,7 +418,14 @@
 	}
 
 	.note{
-		width: 100%;
+		min-width: 400px!important;
+		width: 40%;
 	}
 
+	#notepad li:nth-child(even) {
+	  background: #004b4b;
+	}
+
+
+	
 
