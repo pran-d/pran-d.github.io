@@ -19,7 +19,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 <body class="grey">
 
 <!-- Page Container -->
-<div class="margin" style="max-width:1400px;">
+<div class="margin">
 
 	<div class="white-head">
 	  <h1> Pranav Debbad's Personal Dashboard </h1>
@@ -39,13 +39,13 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 	</div>
 
 
-  <div class="flex-container">
+  <div class="m-grid-row">
     <!-- Left Column -->
-    <div class="flex-item" id="calendar">
+    <div class="m-grid-item col-4" id="calendar">
     		<div class = "grid-container">
-    			<div class = "grid-item" style = "background-color: #91d0c9;"><i class="arrow left"></i></div>
+    			<div class = "grid-item arr1" style = "background-color: #91d0c9;"><i class="arrow left"></i></div>
     			<div class = "month grid-item">April</div>
-    			<div class = "grid-item" style = "background-color: #91d0c9;"><i class="arrow right"></i></div>
+    			<div class = "grid-item arr2" style = "background-color: #91d0c9;"><i class="arrow right"></i></div>
 	    		<div class = "grid-day">S</div> 
 	    		<div class = "grid-day">M</div>
 	    		<div class = "grid-day">T</div>
@@ -86,7 +86,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     		</div>
     </div>
 
-    <div class="flex-item">
+    <div class="m-grid-item col-8">
     	<div id="budgetTracker" class="header">
     		<h2>Budget Tracker</h2>
     		<input type="number" id="amountInput" placeholder="Enter amount...">
@@ -99,8 +99,10 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     		<span id = "expenditure">Total expenses: <span id="result2" style="color: red; font-weight: bold;"></span></span>
     	</div>
     </div>
+	</div>
 
-    <div class="flex-item">
+  <div class="m-grid-row">
+    <div class="m-grid-item col-5">
     	<div id="myDIV" class="header">
 		  	<h2>To-Do List</h2>
 		  	<input type="text" id="myInput" placeholder="Enter task...">
@@ -114,7 +116,21 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 			</ul>
     </div>
 
-  <div class="flex-item notific">
+
+ 	<div class="m-grid-item note col-7">
+	 	<div class = "notes header" >
+	 		<h2>My Notes</h2>
+	 		<input type="text" id="myInput1" placeholder="Enter note">
+	 		<span onclick="newElement1()" class="addBtn">+</span>
+	 	</div>
+
+	 	<ul id="notepad">
+	 	</ul>
+	</div>
+ </div> 
+
+<div class="m-grid-row">
+  <div class="m-grid-item notific col-12">
     	<h2>Notifications</h2>
     	<ul id="notif">
     		<li><span class="name">nishanth nathaniel mages</span>:&nbsp;&nbsp;wanna meet at 8 at usha?<i class="fa fa-eye-slash"></i></span></li>
@@ -124,19 +140,8 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     		<li><span class="name">leon davis</span>:&nbsp;&nbsp;any biharis here dm me<i class="fa fa-eye-slash"></i></li>
     	</ul>
  	</div>
-
- 	<div class="flex-item note">
-	 	<div class = "notes header" >
-	 		<h2>My Notes</h2>
-	 		<input type="text" id="myInput1" placeholder="Enter note">
-	 		<span onclick="newElement1()" class="addBtn">+</span>
-	 	</div>
-
-	 	<ul id="notepad">
-	 	</ul>
-
-	</div>
- </div> 
+ </div>
+</div>
 
 <script>
 	var myNodelist = document.getElementsByTagName("LI");

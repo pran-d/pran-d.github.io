@@ -5,16 +5,36 @@
 
 	/*SETTING UP THE PAGE*/
 
+	[class*="col-"] {
+		float: left;
+	}
+
+	.col-1 {width: 8.33%;}
+	.col-2 {width: 16.66%;}
+	.col-3 {width: 25%;}
+	.col-4 {width: 33.33%;}
+	.col-5 {width: 41.66%;}
+	.col-6 {width: 50%;}
+	.col-7 {width: 58.33%;}
+	.col-8 {width: 66.66%;}
+	.col-9 {width: 75%;}
+	.col-10 {width: 83.33%;}
+	.col-11 {width: 91.66%;}
+	.col-12 {width: 100%;}
+
 	.grey{
 		background-color: #333333!important
 	}
 
     .margin{
+    	min-width: 350px;
+    	max-width: 1900px;
     	margin-top: 0px!important;
     	margin-bottom: 75px!important;
     }
 
     .white-head{
+    	width: 100%;
     	color:#f9f9f9!important;
     	text-shadow: 4px 4px #333;
     	background-color:darkslategrey!important;
@@ -26,9 +46,9 @@
 
     /* Style the top navigation bar */
 	.navbar {
-	  	display: inline-flex;
+	  	display: flex;
 	  	flex-wrap: wrap;
-	  	max-width: 100%;
+	  	width: 100%;
 	  	background-color: darkslategrey;
 	}
 
@@ -40,6 +60,7 @@
 	  text-decoration: none;
 	  text-align: center;
 	  border: solid black;
+	  flex: 1 1 max-content;
 	}
 
 	/* Change color on hover */
@@ -50,8 +71,19 @@
 
 
 
+	/*STYLING THE GRID BOX USED IN VARIOUS ELEMENTS*/
 
-	/*STYLING THE FLEXBOX USED IN VARIOUS ELEMENTS*/
+	.m-grid-row::after {
+		content: "";
+  		clear: both;
+  		display: grid;
+	}
+
+	.m-grid-item{
+    	padding: 5px;
+    	padding-right: 10px!important;
+    	margin-bottom: 10px;
+	}
 
 	.flex-container {
  		 display: flex;
@@ -65,8 +97,8 @@
     	text-align: center;
     	padding: 10px;
     	border-radius: 20px;
+    	flex: 1 1 max-content;
     }
-
 
 
 
@@ -77,13 +109,38 @@
     	background-color: ghostwhite;
     	display: grid;
     	grid-template-columns: auto auto auto auto auto auto auto;
-    	row-gap: 1px;
+    	row-gap: 10px;
+    	border-radius: 20px;
     }
+
+    @media only screen and (max-width: 700px) {
+   	[class*="col-"]{
+    		width: 100%;
+		}
+ 	}
+
+ 	@media only screen and (max-width: 865px) {
+   		[class*="col-7"]{
+    		width: 100%;
+		}
+		[class*="col-5"]{
+    		width: 100%;
+		}
+ 	}
+
 
     .grid-item{
     	text-align: center;
     	padding: 5px;
-    	padding-right: 10px!important;
+    	padding-right: 2px!important;
+    }
+
+    .arr1{
+    	border-top-left-radius: 10px;
+    }
+
+    .arr2{
+    	border-top-right-radius: 10px;
     }
 
     .month{
@@ -142,6 +199,7 @@
 
 	/* Style the header */
 	.header {
+	  min-width: 350px!important;
 	  background-color: #008B8B;
 	  padding: 10px 50px;
 	  color: white;
@@ -230,6 +288,7 @@
 	}
 
 	.col{
+		min-width: 350px!important;
 		background-color: #ccc;
 		padding: 16px 15px 50px 15px;
 		color: black;
@@ -267,6 +326,7 @@
 
 	/* Style the list items */
 	#myUL li {
+	  min-width: 350px!important;
 	  cursor: pointer;
 	  position: relative;
 	  padding: 12px 8px 12px 40px;
@@ -328,12 +388,14 @@
 	
 
 
-
 	/*STYLING THE NOTIFICATIONS SECTION*/
 
 	.notific{
-		min-width: 400px!important;
-		width: 60%;
+		border-radius: 20px;
+		grid-column-start: 1;
+		grid-column-end: 3;
+		min-width: 350px!important;
+		width: 100%;
 		margin-top: 20px;
 		font-size: 20px;
 		background-color: #009393;
@@ -347,7 +409,7 @@
 	}
 
 	#notif li{
-		width: 100%;
+		width: 90%;
 		cursor: pointer;
 		text-align: left;
 		padding: 12px 8px 12px 40px;
@@ -381,7 +443,6 @@
 	/*STYLING THE NOTEPAD*/
 
 	.notes{
-		margin-top: 10px;
 		font-size: 20px;
 		background-color: #009393;
 		padding: 10px 50px;
@@ -398,6 +459,7 @@
 
 
 	#notepad li{
+		min-width: 350px!important;
 		max-width: 100%;
 		text-align: left;
 	  	font-family: 'Times New Roman', sans-serif;
@@ -406,7 +468,7 @@
 	  	padding: 12px 8px 12px 40px;
 	  	color: white;
 	  	background: #003333;
-	  	font-size: 18px;
+	  	font-size: 20px;
 	  	transition: 0.2s;
 	  	overflow-wrap: break-word;
 
@@ -418,8 +480,7 @@
 	}
 
 	.note{
-		min-width: 400px!important;
-		width: 40%;
+		min-width: 350px!important;
 	}
 
 	#notepad li:nth-child(even) {
