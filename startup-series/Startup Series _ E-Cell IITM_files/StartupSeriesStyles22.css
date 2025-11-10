@@ -1,0 +1,554 @@
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+
+.heroes-section {
+	display: grid;
+	grid-template-columns: 15vw 20vw 55vw 10vw;
+	grid-template-rows: 19vw 5vw;
+	column-gap: 3vw;
+	row-gap: 1vw;
+	height: 65vh;
+	width: 100vw;
+	align-content: center;
+}
+
+.section {
+	width: 80%;
+	margin: auto;
+}
+
+.section2 {
+	width: 90%;
+	margin: auto;
+}
+
+body {
+	background: linear-gradient(90deg, rgba(35, 35, 35, 1), rgb(0, 0, 0), rgb(0, 0, 0), rgba(35, 35, 35, 1));
+	/* animation: gradient 7s ease infinite; */
+}
+
+/* @keyframes gradient {
+    0% {
+		background-size: 100%;
+    }
+    50% {
+		background-size: 95%;
+		background-position: center;
+	}
+    100% {
+		background-size: 100%;
+    }
+} */
+
+.heroes-section div {
+	color: white;
+	text-align: center;
+}
+
+.item1 {
+	grid-column: 2;
+	background-image: radial-gradient(
+		rgb(239, 205, 191, 0.9),
+		rgb(239, 205, 191, 0.5),
+		rgb(239, 205, 191, 0.3),
+		transparent,
+		transparent
+	);
+	opacity: 1;
+	animation: animatedBackground 2s linear alternate;
+	/* animation: flicker 3s infinite; */
+}
+
+/* @keyframes flicker{
+	0% {
+		background-image: radial-gradient(rgb(239, 205, 191, 0.9), rgb(239, 205, 191, 0.5), rgb(239, 205, 191, 0.3),transparent, transparent);
+	}
+	1%{
+		background-image: radial-gradient(rgb(239, 205, 191, 0.3), rgb(239, 205, 191, 0.2), transparent, transparent, transparent);
+	}
+	5%{
+		background-image: radial-gradient(rgb(239, 205, 191, 0.6), rgb(239, 205, 191, 0.4), rgb(239, 205, 191, 0.2), transparent, transparent);
+	}
+	12%{
+		background-image: radial-gradient(rgb(239, 205, 191, 0.3), rgb(239, 205, 191, 0.2), transparent, transparent, transparent);
+	}
+	20% {
+		background-image: radial-gradient(rgb(239, 205, 191, 0.9), rgb(239, 205, 191, 0.5), rgb(239, 205, 191, 0.3),transparent, transparent);
+	}
+	100% {
+		background-image: radial-gradient(rgb(239, 205, 191, 0.9), rgb(239, 205, 191, 0.5), rgb(239, 205, 191, 0.3),transparent, transparent);
+	}
+} */
+
+@keyframes animatedBackground {
+	0% {
+		background-image: none;
+	}
+	20% {
+		background-image: radial-gradient(
+			rgb(239, 205, 191, 0.3),
+			rgb(239, 205, 191, 0.2),
+			transparent,
+			transparent,
+			transparent
+		);
+	}
+	30% {
+		background-image: radial-gradient(
+			rgb(239, 205, 191, 0.5),
+			rgb(239, 205, 191, 0.3),
+			rgb(239, 205, 191, 0.1),
+			transparent,
+			transparent
+		);
+	}
+	35% {
+		background-image: radial-gradient(
+			rgb(239, 205, 191, 0.3),
+			rgb(239, 205, 191, 0.2),
+			transparent,
+			transparent,
+			transparent
+		);
+	}
+	40% {
+		background-image: radial-gradient(
+			rgb(239, 205, 191, 0.6),
+			rgb(239, 205, 191, 0.4),
+			rgb(239, 205, 191, 0.2),
+			transparent,
+			transparent
+		);
+	}
+	45% {
+		background-image: radial-gradient(
+			rgb(239, 205, 191, 0.3),
+			rgb(239, 205, 191, 0.2),
+			transparent,
+			transparent,
+			transparent
+		);
+	}
+	50% {
+		background-image: radial-gradient(
+			rgb(239, 205, 191, 0.6),
+			rgb(239, 205, 191, 0.4),
+			rgb(239, 205, 191, 0.2),
+			transparent,
+			transparent
+		);
+	}
+	60% {
+		background-image: radial-gradient(
+			rgb(239, 205, 191, 0.3),
+			rgb(239, 205, 191, 0.2),
+			transparent,
+			transparent,
+			transparent
+		);
+	}
+	100% {
+		background-image: radial-gradient(
+			rgb(239, 205, 191, 0.9),
+			rgb(239, 205, 191, 0.5),
+			rgb(239, 205, 191, 0.3),
+			transparent,
+			transparent
+		);
+	}
+}
+
+.item1 img {
+	padding: 1.5vw;
+	float: right;
+	width: 20vw;
+	height: auto;
+}
+
+@media screen and (max-width: 580px) {
+	.heroes-section {
+		height: 75vh;
+		margin-top: 10vh;
+		grid-template-columns: 100vw;
+		grid-template-rows: 30vh 20vh 10vh;
+	}
+	.heroes-section div {
+		display: inline-flex;
+		grid-column: 1;
+		justify-content: center;
+	}
+	.item1 {
+		grid-row: 1;
+		background-size: 50% 70%;
+		background-repeat: no-repeat;
+		background-position-x: center;
+		background-position-y: top;
+	}
+	.item1 img {
+		height: 30vh;
+		width: auto;
+	}
+	.item2 {
+		padding-top: 0px !important;
+		grid-row: 2;
+	}
+	.item2 h1 {
+		font-size: 8vh !important;
+		padding-top: 0px;
+		text-align: center !important;
+	}
+	.item3 {
+		grid-row: 3 !important;
+	}
+	.item3 h2 {
+		font-size: 3vh !important;
+	}
+	.feature-box-ss {
+		height: max-content !important;
+		width: 100% !important;
+	}
+	.aboutinfo p {
+		line-height: 230%;
+		text-align: center;
+	}
+}
+
+.item2 {
+	padding-top: 5vw;
+	grid-column: 3;
+}
+
+.item2 h1 {
+	font-family: "Maven Pro", sans-serif, 700;
+	line-height: 90%;
+	font-size: 7vw;
+	text-align: left;
+	color: #fbdfff;
+}
+
+.item3 {
+	grid-column: 3;
+	grid-row: 2;
+}
+
+.item3 h2 {
+	font-family: "Maven Pro", sans-serif;
+	color: #efcdbf;
+	font-size: 2.5vw;
+	text-align: left;
+}
+
+.gradient-text {
+	background-image: linear-gradient(25deg, #fc1cbd, #e9a5bd, #efcdbf);
+	background-clip: text;
+	-webkit-background-clip: text;
+	font-family: "Maven Pro", sans-serif;
+	color: transparent !important;
+}
+
+.rect {
+	display: inline-flex;
+	align-items: center;
+	width: 20vw;
+	height: 4vw;
+	border: 0px !important;
+	background: #791953 !important;
+	border-radius: 5rem !important;
+	justify-content: center;
+	font-size: 19px;
+}
+
+.gradient-border {
+	display: inline-flex;
+	align-items: center;
+	width: 20vw;
+	height: 4vw;
+	border: 0px !important;
+	background: #791953 !important;
+	border-radius: 5rem !important;
+	justify-content: center;
+	font-size: 19px;
+	border: solid 0.3rem transparent !important;
+	background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 0, 255, 0)),
+		linear-gradient(45deg, rgba(96, 50, 177, 0.5), rgba(252, 20, 191, 0.5), rgba(208, 165, 14, 0.5)) !important;
+	background-origin: border-box !important;
+	background-clip: content-box, border-box !important;
+	box-shadow: 2px 1000px 1px rgba(20, 19, 19, 1) inset !important;
+}
+
+.buttoncontainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	max-width: 100%;
+	gap: 3vw;
+	margin-top: 3vh;
+	margin-left: 16vw;
+	font-size: 1.5vw !important;
+}
+
+@media screen and (max-width: 768px) {
+	.heroes-section {
+		height: 40vh;
+	}
+}
+
+.rect:hover {
+	transition-duration: 0.3s;
+	-webkit-transition-duration: 0.3s;
+	transform: scale(0.9);
+	-webkit-transform: scale(0.9);
+	background-color: #641644 !important;
+}
+
+.rect:not(:hover) {
+	transition-duration: 0.5s;
+	-webkit-transition-duration: 0.3s;
+}
+
+@media screen and (max-width: 580px) {
+	.buttoncontainer {
+		gap: 5vh;
+		height: 40vh;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		margin: 0;
+		font-size: 2vh !important;
+		padding-top: 3vh !important;
+	}
+
+	.rect {
+		width: 70vw;
+		height: 7vh;
+	}
+
+	.p-t-var {
+		padding-top: 10vh !important;
+	}
+	body {
+		background: rgba(20, 19, 19, 1) !important;
+	}
+}
+
+.flex-row-ss {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+@media screen and (max-width: 1100px) {
+	.feature-box-ss {
+		flex: 48% !important;
+		max-width: 48%;
+	}
+}
+@media screen and (max-width: 580px) {
+	.feature-box-ss {
+		flex: 100% !important;
+		max-width: 100%;
+	}
+	.p-t-var-90 {
+		padding-top: 4px !important;
+	}
+	.timeline-column {
+		flex: 100%;
+		max-width: 100%;
+	}
+	.section {
+		width: 90%;
+	}
+}
+
+.feature-box-ss {
+	height: 360px;
+	margin: 0.5rem;
+	padding: 2rem;
+	text-align: center;
+	background-color: rgb(35, 35, 45);
+	border-radius: 20px;
+	margin-bottom: 1rem;
+	flex: 32%;
+}
+
+.feature-box-ss img {
+	height: 150px;
+	margin-bottom: 20px;
+	width: auto;
+}
+
+.feature-box-ss:hover {
+	cursor: pointer;
+	background-color: rgba(20, 19, 19, 0.5);
+}
+
+.feature-box-ss h3 {
+	font-family: "Inter", sans-serif !important;
+	font-weight: 900;
+	font-size: 20px;
+}
+
+.p-t-var,
+.p-t-var-90 {
+	padding-top: 90px;
+	/* padding-bottom: 2px; */
+}
+
+.subtext-ss {
+	font-size: 15px;
+	font-weight: 500;
+	color: rgb(225, 225, 245, 0.7);
+}
+
+/* Style the button that is used to open and close the collapsible content */
+/* .collapsible {
+	width: 100%;
+	background-color: #eee;
+	color: #444;
+	cursor: pointer;
+	padding: 18px;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+} */
+
+/* .timeline-item{
+	min-height: fit-content;
+	margin: auto;
+	padding: 3rem;
+	text-align: center;
+	background-color: rgba(20, 19, 19, 1);
+	border-radius: 10px;
+  }
+
+
+  Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/* .active, .collapsible:hover {
+	background-color: #ccc;
+  } */
+
+/* Style the collapsible content. Note: hidden by default
+  .content {
+	display: none;
+	overflow: hidden;
+	background-color: #f1f1f1;
+  } */
+
+.card-header h4 {
+	color: white;
+}
+
+.card {
+	background-color: rgb(39, 38, 38);
+}
+
+.ac-title {
+	color: white;
+}
+
+.ac-content p {
+	color: #d4d4c7;
+}
+
+.timeline-icon i {
+	color: black;
+}
+
+.timeline-icon {
+	background-color: transparent;
+	background-image: linear-gradient(25deg, #fc1cbd, #e9a5bd, #efcdbf);
+}
+
+.timeline-item-date {
+	color: #efcdbf;
+}
+
+.timeline-item h4 {
+	color: white;
+}
+
+.ac-title i {
+	color: transparent;
+	background: linear-gradient(25deg, #fc1cbd, #e9a5bd, #efcdbf);
+	background-clip: text;
+	-webkit-background-clip: text;
+	transition: all 0.3s linear;
+	cursor: pointer;
+}
+
+.ac-title i:hover {
+	transform: translate(calc(-30%), calc(-30%));
+}
+
+#footer .copyright-content {
+	background-color: rgba(20, 19, 19, 0.9);
+}
+
+.col-10 {
+	color: rgb(120, 119, 119);
+}
+
+.gradient-heading h3 {
+	background-image: linear-gradient(25deg, #9e1176, #e9a5bd, #e8dbd5);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+.ac-item {
+	background-image: linear-gradient(to top right, rgb(20, 19, 19, 1), #222222, rgb(0, 0, 0, 1));
+}
+
+/* .ac-item:hover{
+	background-image: linear-gradient(to top right, rgb(60, 59, 59, 1), #333333, rgb(20, 20, 20, 1))
+  } */
+
+.heading-text h4 {
+	font-family: Encode Sans SC, sans-serif;
+	background-image: linear-gradient(45deg, #d221bb, #f616bf, #f13a92) !important;
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	letter-spacing: 0.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+	.heading-text h4 {
+		line-height: normal !important;
+		font-size: 34px;
+	}
+}
+
+@media screen and (max-width: 580px) {
+	.heading-text h4 {
+		background-image: linear-gradient(45deg, #d443c1, #ee4cc6, #ef6bab) !important;
+		font-size: 26px;
+	}
+}
+
+#prefooter {
+	padding-bottom: 60px;
+}
+
+.aboutinfo p {
+	line-height: 300%;
+}
+
+.reg-dates {
+	padding-top: 3vh;
+	padding-bottom: 3vh;
+	text-align: center;
+}
+
+.reg-dates p {
+	color: white;
+	font-size: large;
+}
+
+.particles canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
