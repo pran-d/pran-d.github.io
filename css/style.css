@@ -203,7 +203,8 @@ footer {
     transition: color 0.3s;
 }
 
-.social-links a:hover {
+.social-links a:hover,
+.social-links a:hover i {
     color: var(--highlight-color);
 }
 
