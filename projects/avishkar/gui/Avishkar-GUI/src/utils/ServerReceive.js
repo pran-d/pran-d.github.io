@@ -5,7 +5,7 @@ import msgsound from "../assets/msgSound.wav";
 import { Command } from "../views/components/Command/Command.js";
 import { LeftNav } from "../views/components/Command/LeftNav.js";
 import { Row, Col, Container, Button } from "react-bootstrap";
-import { HashRouter, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 import "./styles.css";
 import { MessageBox } from "../views/components/MessageBox/MessageBox.js";
 import "../views/components/MessageBox/MessageBox.css";
@@ -333,7 +333,6 @@ function ServerReceive() {
   });
 
   return (
-    <HashRouter>
       <Container className="fullscreen">
         <Row className="mx-0 px-0">
           <Col lg={2} className="mx-0 px-0">
@@ -520,7 +519,6 @@ function ServerReceive() {
           </Col>
         </Row>
       </Container>
-    </HashRouter>
   );
 }
 

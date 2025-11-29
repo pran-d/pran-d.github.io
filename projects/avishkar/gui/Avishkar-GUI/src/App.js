@@ -1,12 +1,12 @@
 import React from "react";
 import { ServerReceive } from "./utils/ServerReceive.js";
 import { ServerSend } from "./utils/ServerSend.js";
-import { Route, HashRouter, Switch, Redirect } from "react-router-dom";
+import { Route, BrowserRouter, Switch, Redirect } from "react-router-dom";
 import { Navbar } from "./views/components/Navbar/Navbar.js";
 
 const App = () => {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Navbar />
       <Switch>
         <Route exact path="/">
@@ -19,7 +19,7 @@ const App = () => {
           <ServerSend />
         </Route>
       </Switch>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 
