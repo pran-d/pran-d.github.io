@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/projects/avishkar/gui/Avishkar-GUI/build/precache-manifest.f52de0c78cf3d159d6b2716288f4993b.js"
+  "/projects/avishkar/gui/Avishkar-GUI/build/precache-manifest.e0f6303d5e28ca9a28cb7ab52301cdaf.js"
 );
 
 self.addEventListener('message', (event) => {

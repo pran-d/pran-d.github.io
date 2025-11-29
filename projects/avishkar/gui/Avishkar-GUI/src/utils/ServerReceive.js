@@ -36,7 +36,14 @@ const options = {
 // let client = mqtt.connect("wss://test.mosquitto.org:8081/mqtt");
 let client;
 try {
+  if (window.location.protocol === 'https:' && url.startsWith('ws:')) {
+    console.warn("Cannot connect to insecure WebSocket from HTTPS. Using mock client.");
+    throw new Error("Mixed Content Security: Cannot connect to ws:// from https://");
+  }
   client = mqtt.connect(url, options);
+  client.on('error', (err) => {
+    console.error("MQTT Client Error (Global):", err);
+  });
 } catch (err) {
   console.error("MQTT Connect Error:", err);
   client = {
@@ -44,6 +51,8 @@ try {
     subscribe: () => {},
     publish: () => {},
     connected: false,
+    removeListener: () => {},
+    removeAllListeners: () => {},
   };
 }
 
@@ -161,17 +170,22 @@ function ServerReceive() {
  8 - Pressure              Send N/A, Recv N/A
  9 - Reed                  Send N/A, Recv N/A
  */
-  client.on("connect", function () {
-    console.log("Connected");
-    [
-      "/TAH/BusData",
-      "/TAH/PingResponse",
-      "/TAH/fault",
-      "/TAH/state",
-    ].map((topic) => {
-      client.subscribe(topic);
-    });
-    client.on("message", function (topic, message, packet) {
+  useEffect(() => {
+    if (!client) return;
+
+    const onConnect = function () {
+      console.log("Connected");
+      [
+        "/TAH/BusData",
+        "/TAH/PingResponse",
+        "/TAH/fault",
+        "/TAH/state",
+      ].map((topic) => {
+        client.subscribe(topic);
+      });
+    };
+
+    const onMessage = function (topic, message, packet) {
       console.log('Received "' + message + '" on "' + topic + '"');
       if (topic === "/TAH/BusData") {
         switch (message.toString()[0]) {
@@ -340,8 +354,18 @@ function ServerReceive() {
         //setIsError(false);
         play(msgsound);
       }
-    });
-  });
+    };
+
+    client.on("connect", onConnect);
+    client.on("message", onMessage);
+
+    return () => {
+      if (client.removeListener) {
+        client.removeListener("connect", onConnect);
+        client.removeListener("message", onMessage);
+      }
+    };
+  }, []);
 
   return (
       <Container className="fullscreen">

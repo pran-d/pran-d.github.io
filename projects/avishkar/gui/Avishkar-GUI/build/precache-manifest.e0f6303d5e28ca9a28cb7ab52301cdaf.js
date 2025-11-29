@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f90502e85e256183adc49e495fc2b800",
+    "revision": "81a7e8b0803358e423b0865117fdd147",
     "url": "/projects/avishkar/gui/Avishkar-GUI/build/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/projects/avishkar/gui/Avishkar-GUI/build/static/css/2.fd016d7a.chunk.css"
   },
   {
-    "revision": "8e99b063f6b2a428bf16",
+    "revision": "3010be529d18ded42f36",
     "url": "/projects/avishkar/gui/Avishkar-GUI/build/static/css/main.fdeb4c92.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/projects/avishkar/gui/Avishkar-GUI/build/static/js/2.2f6edc00.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8e99b063f6b2a428bf16",
-    "url": "/projects/avishkar/gui/Avishkar-GUI/build/static/js/main.6f540aac.chunk.js"
+    "revision": "3010be529d18ded42f36",
+    "url": "/projects/avishkar/gui/Avishkar-GUI/build/static/js/main.837eac7a.chunk.js"
   },
   {
     "revision": "030e6f4084748b6f2a1b",
