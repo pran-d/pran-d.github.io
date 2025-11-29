@@ -1,7 +1,7 @@
 {
   "name": "mqtt-trial-3",
   "version": "1.0.0",
-  "homepage": ".",
+  "homepage": "https://pran-d.github.io/projects/avishkar/gui/Avishkar-GUI/build/",
   "description": "",
   "main": "index.js",
   "scripts": {

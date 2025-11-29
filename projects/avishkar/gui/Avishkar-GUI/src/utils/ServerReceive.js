@@ -34,7 +34,18 @@ const options = {
 };
 
 // let client = mqtt.connect("wss://test.mosquitto.org:8081/mqtt");
-let client = mqtt.connect(url, options);
+let client;
+try {
+  client = mqtt.connect(url, options);
+} catch (err) {
+  console.error("MQTT Connect Error:", err);
+  client = {
+    on: () => {},
+    subscribe: () => {},
+    publish: () => {},
+    connected: false,
+  };
+}
 
 function ServerReceive() {
   function play(sound) {
