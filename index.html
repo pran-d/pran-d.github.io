@@ -13,8 +13,9 @@
             <a href="#home" class="logo">Pranav</a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#assignments">Assignments</a></li>
+                <li><a href="#internships">Internships</a></li>
+                <li><a href="#research-projects">Research</a></li>
+                <li><a href="#pors">PoRs</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -25,14 +26,85 @@
             <img src="self-photo.png" alt="Pranav" class="profile-img">
             <h1>Hi, I'm Pranav</h1>
             <p class="subtitle">Researcher | Developer | Student</p>
-            <p>Welcome to my portfolio. I am passionate about [Your Field/Interests]. Here you can explore my research works and academic assignments.</p>
+            <p>Welcome to my portfolio. I am passionate about Robotics and Control Systems. Here you can explore my research works and academic assignments.</p>
             <br>
             <a href="#contact" class="btn">Get in Touch</a>
         </div>
     </section>
 
-    <section id="research">
-        <h2>Research Works</h2>
+    <section id="timeline">
+        <h2>Timeline & News</h2>
+        <div class="timeline-container" style="max-width: 800px; margin: 0 auto;">
+            <div class="timeline-item" style="border-left: 3px solid var(--secondary-color); padding-left: 20px; margin-bottom: 20px; position: relative;">
+                <div class="timeline-dot" style="position: absolute; left: -9px; top: 0; width: 15px; height: 15px; background: var(--secondary-color); border-radius: 50%;"></div>
+                <h3 style="color: var(--secondary-color);">Current</h3>
+                <h4>Master's Thesis at ATARI Lab (TUM)</h4>
+                <p>Working under Prof. Majid Khadiv.</p>
+            </div>
+            <div class="timeline-item" style="border-left: 3px solid var(--text-muted); padding-left: 20px; margin-bottom: 20px; position: relative;">
+                <div class="timeline-dot" style="position: absolute; left: -9px; top: 0; width: 15px; height: 15px; background: var(--text-muted); border-radius: 50%;"></div>
+                <h3 style="color: var(--text-muted);">May 2025 - Aug 2025</h3>
+                <h4>Internship at LAAS-CNRS</h4>
+                <p>Research internship under Prof. Olivier Stasse.</p>
+            </div>
+            <div class="timeline-item" style="border-left: 3px solid var(--text-muted); padding-left: 20px; margin-bottom: 20px; position: relative;">
+                <div class="timeline-dot" style="position: absolute; left: -9px; top: 0; width: 15px; height: 15px; background: var(--text-muted); border-radius: 50%;"></div>
+                <h3 style="color: var(--text-muted);">Dec 2024 - May 2025</h3>
+                <h4>Internship at Addverb Technologies</h4>
+                <p>Industrial internship.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="internships">
+        <h2>Internships & Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Master's Thesis (ATARI Lab)</h3>
+                <p class="duration" style="color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 0.5rem;">Current</p>
+                <p>Conducting research on [Topic] at the ATARI Lab, Technical University of Munich, under the supervision of Prof. Majid Khadiv.</p>
+                <div class="card-tags">
+                    <span class="tag">Robotics</span>
+                    <span class="tag">Research</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>LAAS-CNRS</h3>
+                <p class="duration" style="color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 0.5rem;">May 2025 - Aug 2025</p>
+                <p>Research internship at LAAS-CNRS under Prof. Olivier Stasse. Worked on advanced robotics and control systems.</p>
+                <div class="card-tags">
+                    <span class="tag">Robotics</span>
+                    <span class="tag">Control Theory</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Addverb Technologies</h3>
+                <p class="duration" style="color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 0.5rem;">Dec 2024 - May 2025</p>
+                <p>Internship focusing on industrial robotics and automation solutions.</p>
+                <div class="card-tags">
+                    <span class="tag">Robotics</span>
+                    <span class="tag">Automation</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Intelligent Machine Programming Lab</h3>
+                <p class="duration" style="color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 0.5rem;">Coursework</p>
+                <p>Programming a UR10e robot arm for various tasks using computer vision and motion planning.</p>
+                <div class="card-tags">
+                    <span class="tag">UR10e</span>
+                    <span class="tag">Computer Vision</span>
+                </div>
+                <br>
+                <a href="projects/imp-lab/index.html" style="color: var(--secondary-color); text-decoration: none;">View Project &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="research-projects">
+        <h2>Research Projects</h2>
         <div class="grid">
             <div class="card">
                 <h3>Quadruped RL</h3>
@@ -44,45 +116,6 @@
                 </div>
                 <br>
                 <a href="#" style="color: var(--secondary-color); text-decoration: none;">Read More &rarr;</a>
-            </div>
-
-            <div class="card">
-                <h3>LAAS-CNRS</h3>
-                <p>Research internship at LAAS-CNRS. Working on advanced robotics and control systems.</p>
-                <div class="card-tags">
-                    <span class="tag">Robotics</span>
-                    <span class="tag">Control Theory</span>
-                </div>
-                <br>
-                <a href="#" style="color: var(--secondary-color); text-decoration: none;">Read More &rarr;</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="assignments">
-        <h2>Assignments & Projects</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Avishkar GUI</h3>
-                <p>A graphical user interface for Avishkar Hyperloop. Used as the base station for the pod to run, sending commands and receiving data over MQTT.</p>
-                <div class="card-tags">
-                    <span class="tag">React</span>
-                    <span class="tag">Electron</span>
-                    <span class="tag">MQTT</span>
-                </div>
-                <br>
-                <a href="projects/avishkar/gui/index.html" target="_blank" style="color: var(--secondary-color); text-decoration: none;">View Project &rarr;</a>
-            </div>
-
-            <div class="card">
-                <h3>Avishkar Levitation</h3>
-                <p>Levitation systems for the Hyperloop pod. Involves control diagrams and vertical simulations.</p>
-                <div class="card-tags">
-                    <span class="tag">Control Systems</span>
-                    <span class="tag">Simulation</span>
-                </div>
-                <br>
-                <a href="#" style="color: var(--secondary-color); text-decoration: none;">View Project &rarr;</a>
             </div>
 
             <div class="card">
@@ -105,26 +138,37 @@
                 <br>
                 <a href="#" style="color: var(--secondary-color); text-decoration: none;">View Project &rarr;</a>
             </div>
+        </div>
+    </section>
 
+    <section id="pors">
+        <h2>Positions of Responsibility</h2>
+        <div class="grid">
             <div class="card">
-                <h3>Dashboard Project</h3>
-                <p>An interactive dashboard project.</p>
+                <h3>Avishkar Hyperloop</h3>
+                <p>Leading technical teams for the Hyperloop pod competition.</p>
                 <div class="card-tags">
-                    <span class="tag">Web Dev</span>
-                    <span class="tag">Visualization</span>
+                    <span class="tag">Leadership</span>
+                    <span class="tag">Technical Team</span>
                 </div>
                 <br>
-                <a href="dashboard/" target="_blank" style="color: var(--secondary-color); text-decoration: none;">View Project &rarr;</a>
+                <div style="margin-top: 10px;">
+                    <a href="projects/avishkar/gui/index.html" style="display: block; margin-bottom: 5px; color: var(--secondary-color); text-decoration: none;">&bull; Avishkar GUI &rarr;</a>
+                    <a href="#" style="display: block; color: var(--secondary-color); text-decoration: none;">&bull; Levitation Systems &rarr;</a>
+                </div>
             </div>
 
             <div class="card">
-                <h3>Startup Series</h3>
-                <p>A series on startups and entrepreneurship.</p>
+                <h3>E-Cell</h3>
+                <p>Contributing to the entrepreneurship ecosystem.</p>
                 <div class="card-tags">
-                    <span class="tag">HTML/CSS</span>
+                    <span class="tag">Entrepreneurship</span>
+                    <span class="tag">Management</span>
                 </div>
                 <br>
-                <a href="startup-series/startup-series.html" target="_blank" style="color: var(--secondary-color); text-decoration: none;">View Project &rarr;</a>
+                <div style="margin-top: 10px;">
+                    <a href="startup-series/startup-series.html" target="_blank" style="display: block; color: var(--secondary-color); text-decoration: none;">&bull; Startup Series &rarr;</a>
+                </div>
             </div>
         </div>
     </section>
