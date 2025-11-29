@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nDTAg - Pranav's Portfolio</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .project-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .project-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+            border: 1px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            background-color: #000;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+            text-align: center;
+        }
+
+        .mySlides img {
+            width: 100%;
+            vertical-align: middle;
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../../index.html" class="logo">Pranav</a>
+            <ul class="nav-links">
+                <li><a href="../../index.html#home">Home</a></li>
+                <li><a href="../../index.html#research-projects">Research</a></li>
+                <li><a href="../../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section style="padding-top: 120px;">
+        <div class="project-container">
+            <a href="../../index.html#research-projects" class="back-link">&larr; Back to Research Projects</a>
+            
+            <div class="project-header">
+                <h1>nDTAg</h1>
+                <p class="subtitle">Project nDTAg</p>
+                <div class="card-tags" style="justify-content: center; margin-bottom: 2rem;">
+                    <span class="tag">Project</span>
+                </div>
+                <p style="max-width: 800px; margin: 0 auto; text-align: left;">
+                    Project nDTAg.
+                </p>
+            </div>
+
+            <!-- Slideshow Container -->
+            <div class="slideshow-container">
+
+                <div class="mySlides fade" style="display: block;">
+                    <img src="nDTAg.png" style="width:100%">
+                    <div class="text">nDTAg Overview</div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Pranav Debbad. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -32,61 +32,43 @@
         </div>
     </section>
 
-    <section id="timeline">
-        <h2>Timeline & News</h2>
-        <div class="timeline-container" style="max-width: 800px; margin: 0 auto;">
-            <div class="timeline-item" style="border-left: 3px solid var(--secondary-color); padding-left: 20px; margin-bottom: 20px; position: relative;">
-                <div class="timeline-dot" style="position: absolute; left: -9px; top: 0; width: 15px; height: 15px; background: var(--secondary-color); border-radius: 50%;"></div>
-                <h3 style="color: var(--secondary-color);">Current</h3>
-                <h4>Master's Thesis at ATARI Lab (TUM)</h4>
-                <p>Working under Prof. Majid Khadiv.</p>
-            </div>
-            <div class="timeline-item" style="border-left: 3px solid var(--text-muted); padding-left: 20px; margin-bottom: 20px; position: relative;">
-                <div class="timeline-dot" style="position: absolute; left: -9px; top: 0; width: 15px; height: 15px; background: var(--text-muted); border-radius: 50%;"></div>
-                <h3 style="color: var(--text-muted);">May 2025 - Aug 2025</h3>
-                <h4>Internship at LAAS-CNRS</h4>
-                <p>Research internship under Prof. Olivier Stasse.</p>
-            </div>
-            <div class="timeline-item" style="border-left: 3px solid var(--text-muted); padding-left: 20px; margin-bottom: 20px; position: relative;">
-                <div class="timeline-dot" style="position: absolute; left: -9px; top: 0; width: 15px; height: 15px; background: var(--text-muted); border-radius: 50%;"></div>
-                <h3 style="color: var(--text-muted);">Dec 2024 - May 2025</h3>
-                <h4>Internship at Addverb Technologies</h4>
-                <p>Industrial internship.</p>
-            </div>
-        </div>
-    </section>
-
     <section id="internships">
         <h2>Internships & Projects</h2>
         <div class="grid">
             <div class="card">
                 <h3>Master's Thesis (ATARI Lab)</h3>
                 <p class="duration" style="color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 0.5rem;">Current</p>
-                <p>Conducting research on [Topic] at the ATARI Lab, Technical University of Munich, under the supervision of Prof. Majid Khadiv.</p>
+                <p>Generating motion plans using conditional diffusion models at the ATARI Lab, Technical University of Munich, under the supervision of Prof. Majid Khadiv.</p>
                 <div class="card-tags">
                     <span class="tag">Robotics</span>
-                    <span class="tag">Research</span>
+                    <span class="tag">Diffusion Models</span>
+                    <span class="tag">Motion Planning</span>
                 </div>
             </div>
 
             <div class="card">
                 <h3>LAAS-CNRS</h3>
                 <p class="duration" style="color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 0.5rem;">May 2025 - Aug 2025</p>
-                <p>Research internship at LAAS-CNRS under Prof. Olivier Stasse. Worked on advanced robotics and control systems.</p>
+                <p>Developed a ROS2 framework combining MPC (using DDP to solve the OCP) and linear feedback control for the TALOS robot under Prof. Olivier Stasse.</p>
                 <div class="card-tags">
                     <span class="tag">Robotics</span>
                     <span class="tag">Control Theory</span>
+                    <span class="tag">ROS2</span>
+                    <span class="tag">MPC</span>
                 </div>
             </div>
 
             <div class="card">
                 <h3>Addverb Technologies</h3>
                 <p class="duration" style="color: var(--secondary-color); font-size: 0.9rem; margin-bottom: 0.5rem;">Dec 2024 - May 2025</p>
-                <p>Internship focusing on industrial robotics and automation solutions.</p>
+                <p>Reinforcement learning based control for quadrupedal robot locomotion, and neural measurement network (GRU) for state-estimation of robot base velocity.</p>
                 <div class="card-tags">
                     <span class="tag">Robotics</span>
-                    <span class="tag">Automation</span>
+                    <span class="tag">Reinforcement Learning</span>
+                    <span class="tag">State Estimation</span>
                 </div>
+                <br>
+                <a href="projects/quadruped-rl/index.html" style="color: var(--secondary-color); text-decoration: none;">View Project &rarr;</a>
             </div>
 
             <div class="card">
@@ -115,18 +97,19 @@
                     <span class="tag">Python</span>
                 </div>
                 <br>
-                <a href="#" style="color: var(--secondary-color); text-decoration: none;">Read More &rarr;</a>
+                <a href="projects/quadruped-rl/index.html" style="color: var(--secondary-color); text-decoration: none;">Read More &rarr;</a>
             </div>
 
             <div class="card">
                 <h3>Cybathlon</h3>
-                <p>Participation in the Cybathlon competition. Developing assistive technologies.</p>
+                <p>Developed an actuation system to assist passive polycentric knee users (such as the Kadam knee) in performing demanding tasks such as stair climbing. Design and prototype of a cable-driven mechanism, presented at Cybathlon 2024.</p>
                 <div class="card-tags">
                     <span class="tag">Robotics</span>
                     <span class="tag">Exoskeleton</span>
+                    <span class="tag">Assistive Tech</span>
                 </div>
                 <br>
-                <a href="#" style="color: var(--secondary-color); text-decoration: none;">View Project &rarr;</a>
+                <a href="projects/cybathlon/index.html" style="color: var(--secondary-color); text-decoration: none;">View Project &rarr;</a>
             </div>
 
             <div class="card">
@@ -136,7 +119,7 @@
                     <span class="tag">Project</span>
                 </div>
                 <br>
-                <a href="#" style="color: var(--secondary-color); text-decoration: none;">View Project &rarr;</a>
+                <a href="projects/ndtag/index.html" style="color: var(--secondary-color); text-decoration: none;">View Project &rarr;</a>
             </div>
         </div>
     </section>
@@ -154,7 +137,7 @@
                 <br>
                 <div style="margin-top: 10px;">
                     <a href="projects/avishkar/gui/index.html" style="display: block; margin-bottom: 5px; color: var(--secondary-color); text-decoration: none;">&bull; Avishkar GUI &rarr;</a>
-                    <a href="#" style="display: block; color: var(--secondary-color); text-decoration: none;">&bull; Levitation Systems &rarr;</a>
+                    <a href="projects/avishkar/levitation/index.html" style="display: block; color: var(--secondary-color); text-decoration: none;">&bull; Levitation Systems &rarr;</a>
                 </div>
             </div>
 
@@ -169,6 +152,30 @@
                 <div style="margin-top: 10px;">
                     <a href="startup-series/startup-series.html" target="_blank" style="display: block; color: var(--secondary-color); text-decoration: none;">&bull; Startup Series &rarr;</a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline">
+        <h2>Timeline & News</h2>
+        <div class="timeline-container" style="max-width: 800px; margin: 0 auto;">
+            <div class="timeline-item" style="border-left: 3px solid var(--secondary-color); padding-left: 20px; margin-bottom: 20px; position: relative;">
+                <div class="timeline-dot" style="position: absolute; left: -9px; top: 0; width: 15px; height: 15px; background: var(--secondary-color); border-radius: 50%;"></div>
+                <h3 style="color: var(--secondary-color);">Current</h3>
+                <h4>Master's Thesis at ATARI Lab (TUM)</h4>
+                <p>Working under Prof. Majid Khadiv.</p>
+            </div>
+            <div class="timeline-item" style="border-left: 3px solid var(--text-muted); padding-left: 20px; margin-bottom: 20px; position: relative;">
+                <div class="timeline-dot" style="position: absolute; left: -9px; top: 0; width: 15px; height: 15px; background: var(--text-muted); border-radius: 50%;"></div>
+                <h3 style="color: var(--text-muted);">May 2025 - Aug 2025</h3>
+                <h4>Internship at LAAS-CNRS</h4>
+                <p>Research internship under Prof. Olivier Stasse.</p>
+            </div>
+            <div class="timeline-item" style="border-left: 3px solid var(--text-muted); padding-left: 20px; margin-bottom: 20px; position: relative;">
+                <div class="timeline-dot" style="position: absolute; left: -9px; top: 0; width: 15px; height: 15px; background: var(--text-muted); border-radius: 50%;"></div>
+                <h3 style="color: var(--text-muted);">Dec 2024 - May 2025</h3>
+                <h4>Internship at Addverb Technologies</h4>
+                <p>Industrial internship.</p>
             </div>
         </div>
     </section>

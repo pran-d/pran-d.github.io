@@ -2,6 +2,7 @@
     --primary-color: #ecf0f1;
     --secondary-color: #3498db;
     --accent-color: #e74c3c;
+    --highlight-color: #e67e22;
     --text-color: #e0e0e0;
     --text-muted: #a0a0a0;
     --bg-color: #121212;
@@ -64,7 +65,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: var(--secondary-color);
+    color: var(--highlight-color);
 }
 
 section {
@@ -119,7 +120,7 @@ h1 {
 }
 
 .btn:hover {
-    background: #2980b9;
+    background: var(--highlight-color);
 }
 
 h2 {
