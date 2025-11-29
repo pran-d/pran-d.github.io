@@ -46,6 +46,11 @@ nav {
     font-weight: bold;
     color: var(--primary-color);
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+.logo:hover {
+    color: var(--highlight-color);
 }
 
 .nav-links {
@@ -195,6 +200,11 @@ footer {
     margin: 0 10px;
     text-decoration: none;
     font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--highlight-color);
 }
 
 @media (max-width: 768px) {
